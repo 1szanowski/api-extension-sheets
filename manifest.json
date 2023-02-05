@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Sheet Parser Extension",
+  "version": "1.0",
+  "browser_action" :
+  {"default_popup": "popup.html"},
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+      "jquery-3.6.3.min.js",
+        "script.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "*://*/*"
+  ],
+  "web_accessible_resources": [
+    "table.html",
+    "jquery.min.js"
+  ]
+
+}
+
+
